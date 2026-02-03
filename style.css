@@ -1,0 +1,331 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: lightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: red;
+}
+
+p {
+  font-size: 16px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start; /* top align */
+  min-height: 100vh;       /* at least full screen */
+  padding: 50px 0;         /* space top & bottom */
+}
+
+
+.card {
+  background: white;
+  width: 350px;
+  max-width: 90%;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 5px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .profile-pic {
+    width:  80px;
+    height: 80px;
+  }
+
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover; /* ensures full image fits inside circle */
+  margin-bottom: 15px;
+  border: 3px solid #3498db;
+}
+
+
+.navbar {
+  background: #2c3e50;
+  color: white;
+  padding: 15px 30px; 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.project-card {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 5px gray;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+a button {
+  width: 100%;
+  background-color: red;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.bio {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.services li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.cta {
+  background: #3498db;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.testimonial-card {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 0 5px gray;
+}
+
+.testimonial-card h4 {
+  margin-top: 8px;
+  text-align: right;
+  color: #333;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.price-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 5px gray;
+}
+
+.price-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.price-card.best {
+  border-color: #3498db;
+  transform: scale(1.05);
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 18px;
+
+  cursor: pointer;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
